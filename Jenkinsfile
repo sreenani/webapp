@@ -5,7 +5,9 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "Build python"
-                sh "python3.5 -v"
+                sh '''  python3.5 -v
+                        virtualenv venv
+                   '''
             }
         }
         stage('Test') { 
