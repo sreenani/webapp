@@ -5,7 +5,7 @@ pipeline {
         stage('Build') { 
             steps {
                 echo "Build python"
-                python3 -v
+                sh "python3.5 -v"
             }
         }
         stage('Test') { 
