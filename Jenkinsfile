@@ -17,8 +17,10 @@ pipeline {
             steps {
                 echo "Test"
                 sh '''
-                        pip list
+                        pip3 list
                         python webapp/tests.py
+                        pip3 install pytest
+                        python -m pytest --verbose --junit-xml test-reports/results.xml
                 '''
             }
         }
