@@ -2,11 +2,14 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('Build Environment') { 
             steps {
                 echo "Build python"
                 sh '''  python3.5 -v
                         virtualenv venv
+                        source venv/bin/activate
+                        cd webapp
+                        pip install -r requirements.txt
                    '''
             }
         }
