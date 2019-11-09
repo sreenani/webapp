@@ -16,6 +16,10 @@ pipeline {
         stage('Test') { 
             steps {
                 echo "Test"
+                sh '''
+                        pip list
+                        python webapp/tests.py
+                '''
             }
         }
         stage('Deploy') { 
