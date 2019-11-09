@@ -2,4 +2,5 @@ Flask
 Jinja2
 Werkzeug
 distribute
+pytest
 #wsgiref
