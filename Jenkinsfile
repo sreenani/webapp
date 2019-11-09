@@ -21,7 +21,7 @@ pipeline {
                         pip list
                         python webapp/tests.py
                         pip install pytest
-                        python -m pytest --verbose --junit-xml test-reports/results.xml
+                        #python -m pytest --verbose --junit-xml test-reports/results.xml
                 '''
             }
         }
