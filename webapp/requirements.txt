@@ -3,4 +3,5 @@ Jinja2
 Werkzeug
 distribute
 pytest
+pytest-cov
 #wsgiref
