@@ -17,9 +17,10 @@ pipeline {
             steps {
                 echo "Test"
                 sh '''
-                        pip3 list
+                        . ./venv/bin/activate
+                        pip list
                         python webapp/tests.py
-                        pip3 install pytest
+                        pip install pytest
                         python -m pytest --verbose --junit-xml test-reports/results.xml
                 '''
             }
