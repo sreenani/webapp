@@ -5,7 +5,7 @@ pipeline {
         stage('Build Environment') { 
             steps {
                 echo "Build python"
-                sh '''  python3.5 -v
+                bash '''  python3.5 -v
                         virtualenv venv
                         source venv/bin/activate
                         cd webapp
